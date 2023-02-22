@@ -1,0 +1,15 @@
+{
+  "runtime": "Net60",
+  "documentGenerator": {
+    "fromDocument": {
+      "json": "jellyfin-openapi-stable.json"
+    }
+  },
+  "codeGenerators": {
+    "openApiToCSharpClient": {
+      "output": "Client.g.cs",
+      "namespace": "Marmelade.JellyfinClient"
+      
+    }
+  }
+}
