@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marmelade", "Marmelade\Marmelade.csproj", "{87BD04F1-66A0-477A-A6CA-CDE6BCB7841B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jellyfin-Client", "Jellyfin-Client\Jellyfin-Client.csproj", "{30BF9DD9-4111-445D-AFFB-FB3A36D7B9C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JellyfinClient", "JellyfinClient\JellyfinClient.csproj", "{30BF9DD9-4111-445D-AFFB-FB3A36D7B9C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

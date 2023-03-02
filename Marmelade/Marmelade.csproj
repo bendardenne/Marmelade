@@ -9,9 +9,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Models\" />
         <AvaloniaResource Include="Assets\**" />
         <None Remove=".gitignore" />
+        <None Remove="Models\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -24,6 +24,7 @@
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.18" />
         <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.18" />
+        <PackageReference Include="Splat.NLog" Version="14.6.8" />
         <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4" />
     </ItemGroup>
 
@@ -32,9 +33,22 @@
         <DependentUpon>PlayQueue.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Remove="Models\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Jellyfin-Client\Jellyfin-Client.csproj" />
+      <ProjectReference Include="..\JellyfinClient\JellyfinClient.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="NLog.config" />
+      <EmbeddedResource Include="NLog.config">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Remove="Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaXaml Remove="Models\**" />
     </ItemGroup>
 </Project>

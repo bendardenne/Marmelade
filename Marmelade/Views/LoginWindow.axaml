@@ -1,0 +1,15 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Marmelade.Views.LoginWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Marmelade">
+
+        <StackPanel Spacing="5">
+                <TextBox Text="{Binding ServerURL}" Watermark="Server URL"/>
+                <TextBox Text="{Binding Username}" Watermark="Username"/>
+                <TextBox Text="{Binding Password}" Watermark="Password" PasswordChar="*"/>
+                
+                <Button Command="{Binding ConnectCommand}" > OK </Button>
+        </StackPanel>
+        
+</Window>

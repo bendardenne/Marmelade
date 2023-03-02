@@ -8,8 +8,7 @@
   "codeGenerators": {
     "openApiToCSharpClient": {
       "output": "Client.g.cs",
-      "namespace": "Marmelade.JellyfinClient"
-      
+      "namespace": "JellyfinClient"
     }
   }
 }
